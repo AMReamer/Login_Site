@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	{{#if message}}
+	<h2 class="alert">{{message}}</h2>
+	{{/if}}
+<div>
+	<form action="/auth/register" method="POST" id="register">
+		<h1>Register</h1>
+		<label for="user"><b>Username</b></label>
+		<br>
+		<input type="text" id="username" placeholder="Username" name="username" required>
+		<br>
+		<label for="password"><b>Password</b></label>
+		<br>
+		<input type="password" id="password" placeholder="Password" name="password" required>
+		<br>
+		<label for="confirm"><b>Confirm Password</b></label>
+		<br>
+		<input type="password" id="confirm" placeholder="Password" name="confirm" required>
+		<br>
+		<button type="submit">Register</button>
+	</form>
+	<form action="/">
+		<button type="submit">Existing User</button>
+	</form>
+</div>
+</body>
+</html>
